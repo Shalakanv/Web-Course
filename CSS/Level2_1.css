@@ -1,0 +1,140 @@
+h3{
+     background-color: antiquewhite !important; /* jya proprty pudhe important lihila ti kadhich change nhi hot  */
+}
+
+/* Universal selector */
+*{
+    font-family: 'Courier New';
+}
+
+/* h3{
+    color: purple;
+} */
+
+/* Element selector */
+h1,h3{
+    color: #b92b27;
+}
+
+/* same property to multiple elment we separate them using ',' */
+
+/* ID selector */
+#login{
+    background-color: white;
+}
+
+#signup{
+    background-color: #b92b27;
+    color: white;
+}
+
+/* Class selector */
+.upvote{
+    background-color: green;
+    color: aliceblue;
+}
+
+/* Descendent selector */
+/* we can skip multiple level to style element  */
+p a{
+    color: purple;
+    background-color: yellow;
+}
+/* either we can give class name to add the p and then use it as .post a , this will also work  */
+
+nav ul li a{
+    color: hotpink;
+}
+
+/* Adjacent Sibling Combinator */
+/* ele1 + ele2 means ele2 is immediate next to ele1 (sibling)*/
+
+p+h3{
+    text-decoration: underline;
+}
+
+.upvote + button{
+    background-color: cornflowerblue;
+    color: darkblue;
+}
+
+/* Child Combinator */
+/* ( span > button ) selects all buttons which are direct children of spans , works only to direct child  */
+
+div > input{
+    background-color: darksalmon;
+}
+
+input[type="text"]{
+    color: green;
+}
+
+input[type="password"]{
+    color: red;
+}
+
+input[type]{
+    background-color: ghostwhite;
+}
+
+/* element ki state ke basis pr css change karna hai to kaise kare ---> using pseudo class */
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+/* h3:hover{
+    text-decoration: overline;
+} */
+
+
+/* active mhanje click kelela asel ti state  */
+button:active{
+    background-color: hotpink;
+}
+
+p:active{
+    font-weight: bold;
+    color: green;
+}
+
+input[type="radio"]:checked + label{
+    color: red;
+    font-weight: bold;
+}
+
+div:nth-of-type(2n)
+{
+    background-color: blanchedalmond;
+}
+
+input[type="number"]:invalid{
+    color: brown;
+}
+
+ /* Pseudo Elements - keyword added to selector that lets you style a specific part of selector elements  */
+
+ h1::first-letter{
+    color: green;
+ }
+
+ p::first-line{
+    color: purple;
+ }
+
+ p::selection{
+    background-color: limegreen;
+ }
+
+ /* p::after{
+    content: "Paragraph";
+ } */
+
+  /* It will add the text "Paragraph" after the content of every <p> element. */
+
+  /* What to remember? */
+  /* 1) id > class > element
+  2) more selector > less selector
+  3) if specificity same ===> cascading ( jo last main hai wo apply hoga) */
+  /* 4) highest priority - inline style  */

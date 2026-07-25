@@ -1,0 +1,51 @@
+#container{
+    width: 60%;
+    height: 600px;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    /* restrict karta hai element ko ki ab unhe parent container main hi rahena hai no overflow and its by default row */
+    flex-direction: column; 
+    /*  ( here orienattion get changed for reverse) */
+    /* It sets how flex items are placed in the flex container,along which axis and direction */
+    /* axis which go through element is main axis and opposite axis is cross axis */
+
+    /* flexbox-direction:row; ===> main axis, left to right
+    flexbox-direction:row-reverse; ===> main axis,right to left 
+    flexbox-direction:column; ===> main axis, top to bottom
+    flexbox-direction:column-reverse; ===> main axis, bottom to top */
+
+
+    /* justify-content===> tells the browser distributes space between and around content items along the main axis */
+    /* justify-content:flex-start; */
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    /* align-items: baseline; */
+    align-content: flex-start;
+}
+
+#orange{
+    align-self: flex-start;
+    /* flex-grow: 1; */
+    flex-shrink: 1;
+}
+
+#blue{
+    /* flex-basis: 50px; */
+    /* flex-grow: 2; */
+    /* max-width: 400px; */
+    flex-shrink: 2;
+}
+
+h1{
+    text-align: center;
+}
+ 
+#container div{
+    height: 100px;
+    width: 300px;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}

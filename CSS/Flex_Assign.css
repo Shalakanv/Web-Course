@@ -1,0 +1,47 @@
+/* Question 1 CSS */
+
+/* #outer{
+    width: 400px;
+    height: 400px;
+    border: 3px solid skyblue;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 50px;
+    text-align: center;
+} */
+
+/* Question 2 CSS */
+
+#container{
+    height: 50px;
+    width: 900px;
+    background-color: rgb(248, 200, 216);
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    display: flex;
+    /* justify-content: flex-start; */
+    align-content: center;
+}
+
+.box{
+    height: 50px;
+    width: 80px;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-left: 5px;
+    line-height: 50px;
+
+}

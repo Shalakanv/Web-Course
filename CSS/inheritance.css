@@ -1,0 +1,19 @@
+div{
+    background-color: yellow;
+}
+
+/* form{
+    background-color: red;
+} */
+
+/* input boxes,button by default parent ke property ko inherit nahi karte  , sare ke sare element unke parents se property inherit karneka try karte hai aur nhi hua to grandparents se  */
+
+input{
+    background-color: inherit;
+}
+
+button{
+    background-color: inherit;
+}
+
+/* kuch property ko hum inherit nhi kar sakte  */

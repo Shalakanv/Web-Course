@@ -1,0 +1,49 @@
+.card{
+    width: 250px;
+    height: 350px;
+    background-color: aquamarine;
+    position:relative;
+}
+
+img{
+    width:250px;
+    height: 200px;
+    border-radius: 50%;
+    transition: border-radius  ease-in-out ;
+}
+
+img:hover{
+    border-radius: 20px;
+}
+
+p{
+    font-size: 15px;
+    margin-top: auto;
+    padding: 0 10px 10px 10px;
+    transition: text-decoration 1s 0.5s;
+}
+
+p:hover{
+    text-decoration: underline;
+}
+
+#name{
+    font-size: 20px;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+button{
+    background-color: yellow;
+    color: black;
+    position: absolute;
+    left: 85px;
+    width: 80px;
+    border:2px solid green;
+
+}
+
+button:hover{
+    box-shadow: 2px 2px 2px purple;
+}

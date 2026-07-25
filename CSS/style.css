@@ -1,0 +1,56 @@
+/* h1{
+    Color property is used for foreground
+    color:blue;
+    background-color:orange ;
+    text-decoration: wavy underline;
+    text-decoration-color: magenta;
+}
+
+p{
+    color: pink;
+    background-color: yellow;
+}
+
+button{
+    color: red;
+    background-color: black;
+}
+
+h3{
+    text-align: center;
+    text-decoration: blue underline;
+    letter-spacing: 5px;
+}
+
+p{
+    text-align: left;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: normal;
+    letter-spacing: 10px;
+} */
+
+/* *********************** Practice Question ******************** */
+
+h1{
+    font-family: League spartan;
+    color: #ffa511;
+    text-align: center;
+    font-size:55px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-decoration: teal double underline;
+    text-transform: uppercase;
+}
+
+/* 
+*********** Text Properties ************** 
+text-align  ---> relative to the parent ( left(start),right(end),center,justify)
+font weight ---> (normal(400),bold(700)) , (scale - 100 to 900 )
+text-decoration  ---> (underline,overline,line-through,dashed,...)
+line-height  --> increase line ke bich ki height ( normal,2.5(2.5 * normal ),...)
+letter-spacing ---> horizontal spacing between text characters
+font-size - px is absolute unit ( 50px,10px like this )
+font-family ---> specifies a prioritized list of one or more font family names
+*/

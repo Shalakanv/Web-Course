@@ -1,0 +1,15 @@
+div{
+    height: 200px;
+    width:200px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    margin: 5px;
+    /* display: inline; If we don only inline here then only margin property is working here */
+    display: inline-block;
+    /* Here it behave like inline but its styling is block  */
+}
+
+#third{
+    display: none;
+    /* gayab ho jayega  */
+}
