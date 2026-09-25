@@ -1,0 +1,24 @@
+/* body{
+    text-align: center;
+}
+
+div{
+    width: 500px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid black ;
+} */
+
+div{
+    background-color: lightblue;
+    width: 500px;
+    height: 100px;
+}
+
+ul{
+    background-color: lightgreen;
+}
+
+li{
+    background-color: lightcoral;
+}

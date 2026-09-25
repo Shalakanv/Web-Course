@@ -222,66 +222,327 @@
 
 // Q3)
 
-let Quarter = "Quarter1";
+// let Quarter = "Quarter1";
 
-switch(Quarter)
+// switch(Quarter)
+// {
+//     case "Quarter1":
+//         console.log("January,February,March");
+//         break;
+//     case "Quarter2":
+//         console.log("April,May,June");
+//         break;
+//     case "Quarter3":
+//         console.log("July,August,September");
+//         break;
+//     case "Quarter4":
+//         console.log("October,November,December");
+//         break;
+//     default:
+//         console.log("Error!!");
+// }
+
+// // Q4)
+
+// let str = "Anuja";
+
+// if(((str[0]==='A' || str[0]==='a') && str.length > 5))
+// {
+//     console.log("golden string");
+// }else{
+//     console.log("not golden string");
+// }
+
+// // Q5)
+
+// let n1 = 15;
+// let n2 = 34;
+// let n3 = 24;
+
+// if((n1 > n2) && (n1 > n3))
+// {
+//     console.log(n1);
+// }else if((n2 > n1) && (n2 > n3))
+// {
+//     console.log(n2);
+// }
+// else{
+//     console.log(n3);
+// }
+
+// // Q6)
+
+// let digit1 = n2 % 10;
+// let digit2 = n3 % 10;
+
+// if((digit1 === digit2))
+// {
+//     console.log("Same last digit");
+// }
+// else{
+//     console.log("Different last digit");
+// }
+
+
+// String Methods
+
+// let str = "  Hello  ";
+// let ans = str.trim();
+// console.log(ans);
+
+// console.log(ans.toUpperCase());
+
+// let msg = "ILoveCoding";
+// console.log(msg.indexOf("Love"));
+
+// let M = "    Shalaka   ";
+// // let newM = M.trim();
+// // console.log("Message after trim:",newM);
+// // newM = newM.toUpperCase();
+// // console.log("After uppercase:",newM);
+
+// let newM = M.trim().toUpperCase();
+// console.log(newM);
+
+// let msg = "apnaCollege";
+// console.log(msg.slice(4,msg.length));
+// console.log(msg);
+
+// console.log(msg.replace("apna","My"));
+
+// console.log(msg.repeat(3));
+
+
+// let msg = "help!";
+// console.log(msg.trim().toUpperCase());
+
+// let name ="ApnaCollege";
+// console.log(name.slice(4,9));
+// console.log(name.indexOf("na"));
+// console.log(name.replace("Apna","Our"));
+
+// console.log(name.slice(4,name.length).replace('l','t'));
+// console.log(name.slice(4,name.length).replace('l','t').replace('l','t'));
+
+
+// ********************* Array DS ****************
+
+// let student1 = "Shalaka";
+// let student2 = "Lokesh";
+// let student3 = "Shlok";
+// instead of this we will create array 
+
+// let array = ["Shalaka","Lokesh","Shlok"];
+// let info = ["Shalaka",25,6.1]; // mixed array 
+
+// let cars = ["audi","bmw","xuv","maruti"];
+
+// let months = ["januray","july","march","august"];
+
+// ****************** Practice Questions (part 3) **************
+
+// let array = [1,2,3,4];
+// let n = 3;
+
+// let ans = array.slice(0,n);
+// console.log(ans);
+
+// // ***********************************
+
+
+// let ans1 = array.slice(array.length-n);
+// console.log(ans1);
+
+
+// // ************************************
+
+// let name = 'Shala';
+
+// if(name.length == 0)
+// {
+//     console.log("Blank");
+// }
+// else{
+//     console.log("Not Blank");
+// }
+
+// // **********************************
+
+// let index = 2;
+// if(name[index] == name[index].toLowerCase())
+// {
+//     console.log("Character is lowercase");
+// }
+// else{
+//     console.log("Character is not lowercase");
+// }
+
+// // *****************************************
+
+// let String = "     Lokesh  ";
+
+// let newOne = String.trim();
+// console.log(newOne);
+
+// // Print table of 5
+
+// let num = prompt("Enter your number");
+// num = parseInt(num);
+// for(let i=1;i<=10;i++)
+// {
+//     console.log(i*num);
+// }
+
+// favourite movie
+
+// let favourite = "Harry Potter";
+
+// let guess = prompt("Enter your guess");
+
+// while((guess != favourite))
+// {
+//     if(guess == "quit")
+//     {
+//         console.log("You quit");
+//         break;
+//     }
+//     guess = prompt("Wrong guess.Please try again");
+// }
+
+// if(guess == favourite)
+// {
+//     console.log("Congrats");
+// }
+
+// break keyword use
+
+// let i = 1;
+
+// while(i<=5)
+// {
+//     if(i == 3)
+//     {
+//         break;
+//     }
+//     console.log(i);
+//     i++;
+// }
+
+// loops with arrays
+
+// let fruits = ["Apple","banana","Litchi","Orange","mango"];
+
+// for(let i=0;i<fruits.length;i++)
+// {
+//     console.log(i,fruits[i]);
+// }
+
+// Nested loops with nested arrays
+
+// let heroes = [["Ironman","spiderman","Thor"],["superman","wonder woman","Flash"]];
+
+// for(let i=0;i<heroes.length;i++)
+// {
+//     console.log(i,heroes[i]);
+//     for(let j=0;j<heroes[i].length;j++)
+//     {
+//         // console.log(j,heroes[i][j]);
+//         console.log(`j=${j},${heroes[i][j]}`);
+//     }
+// }
+
+// for of loop
+
+// for(fruit of fruits)
+// {
+//     console.log(fruit);
+// }
+
+// char is just a variable name , you can use any thing here
+// for(char of "apnacollege")
+// {
+//     console.log(char);
+// }
+
+// Nested for of loop
+
+// for(list of heroes)
+// {
+//     for(name of list)
+//     {
+//         console.log(name);
+//     }
+// }
+
+// JS Practice Questions
+
+// let arr = [1,2,3,4,5,6,2,3];
+// let num = 2;
+
+// for(let i=0;i<arr.length;i++)
+// {
+//     if(arr[i]==num)
+//     {
+//         arr.splice(i,1);
+//         i--;
+//     }
+// }
+
+// console.log(arr);
+
+// JS program to find no of digits in a number
+
+// let num1 = 287152;
+// let count = 0;
+// let sum = 0;
+
+// while(num1 != 0)
+// {
+//     let rem = num1 % 10;
+//     count++;
+//     num1 = Math.floor(num1/10);
+// }
+
+// console.log(count);
+
+// while(num1 != 0)
+// {
+//     let rem1 = num1 % 10;
+//     sum = sum+rem1;
+//     num1 = Math.floor(num1/10);
+// }
+
+// console.log(sum);
+
+// write factorial of a number n
+
+let n = 5;
+let factorial = 1;
+
+for(let i=1;i<=n;i++)
 {
-    case "Quarter1":
-        console.log("January,February,March");
-        break;
-    case "Quarter2":
-        console.log("April,May,June");
-        break;
-    case "Quarter3":
-        console.log("July,August,September");
-        break;
-    case "Quarter4":
-        console.log("October,November,December");
-        break;
-    default:
-        console.log("Error!!");
+    factorial = factorial * i;
 }
 
-// Q4)
+console.log(factorial);
 
-let str = "Anuja";
+// Find largest number in an array
 
-if(((str[0]==='A' || str[0]==='a') && str.length > 5))
+let num = [10,20,30,40,50];
+let max = num[0];
+
+for(let i=0;i<num.length;i++)
 {
-    console.log("golden string");
-}else{
-    console.log("not golden string");
+    if(num[i] > max)
+    {
+        max = num[i];
+    }
 }
+console.log(max);
 
-// Q5)
 
-let n1 = 15;
-let n2 = 34;
-let n3 = 24;
 
-if((n1 > n2) && (n1 > n3))
-{
-    console.log(n1);
-}else if((n2 > n1) && (n2 > n3))
-{
-    console.log(n2);
-}
-else{
-    console.log(n3);
-}
 
-// Q6)
-
-let digit1 = n2 % 10;
-let digit2 = n3 % 10;
-
-if((digit1 === digit2))
-{
-    console.log("Same last digit");
-}
-else{
-    console.log("Different last digit");
-}
 
 
 
