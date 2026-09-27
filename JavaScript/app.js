@@ -516,33 +516,193 @@
 
 // write factorial of a number n
 
-let n = 5;
-let factorial = 1;
+// let n = 5;
+// let factorial = 1;
 
-for(let i=1;i<=n;i++)
-{
-    factorial = factorial * i;
-}
+// for(let i=1;i<=n;i++)
+// {
+//     factorial = factorial * i;
+// }
 
-console.log(factorial);
+// console.log(factorial);
 
 // Find largest number in an array
 
-let num = [10,20,30,40,50];
-let max = num[0];
+// let num = [10,20,30,40,50];
+// let max = num[0];
 
-for(let i=0;i<num.length;i++)
-{
-    if(num[i] > max)
-    {
-        max = num[i];
-    }
+// for(let i=0;i<num.length;i++)
+// {
+//     if(num[i] > max)
+//     {
+//         max = num[i];
+//     }
+// }
+// console.log(max);
+
+// JS Call Stack 
+
+// function one(){
+//     return 1;
+// }
+
+// function two(){
+//     return one();
+// }
+
+// function three(){
+//     let ans = one() + two();
+//     console.log(ans);
+// }
+
+// three();
+
+// breakpoint: used as a debugging tool to pause the execution of code at a specific line, allowing developers to inspect variables and the call stack at that point in time.
+// how to do debugging: open dev tools in browser, go to sources tab, click on line number to set breakpoint, refresh the page, execution will pause at that line, inspect variables and call stack, step through code using step over/into/out buttons.
+
+h1 = document.querySelector("h1");
+
+function changeColor(color,delay){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            h1.style.color = color;
+            resolve("Color changes!");
+        },delay);
+    });
 }
-console.log(max);
 
+// callback hell: when multiple nested callbacks are used, making the code hard to read and maintain. It can be avoided by using promises or async/await syntax.
 
+// changeColor("red",1000,()=>{
+//     changeColor("orange",1000,()=>{
+//         changeColor("green",1000,()=>{
+//             changeColor("blue",1000,()=>{
+//                 changeColor("pink",1000,()=>{;
+//                 });
+//            });
+//         });
+//     });
+// });
 
+changeColor("red",1000)
+.then(()=>{
+    console.log("Color changed to red");
+    return changeColor("orange",1000);
+})
+.then(()=>{
+    console.log("Color changed to orange");
+    return changeColor("green",1000);
+})
+.then(()=>{
+    console.log("Color changed to green");
+    return changeColor("blue",1000);
+})
+.then(()=>{
+    console.log("Color changed to blue");
+})
 
+// setTimeout"=>
+//     h1.style.color = "red";
+// },1000);
+
+// setTimeout(()=>{
+//     h1.style.color = "orange";
+// },2000);
+
+// setTimeout(()=>{
+//     h1.style.color = "green";
+// },3000);
+
+// *************** callback Hell example: saving data to database with success and failure callbacks ******************
+
+// function savetoDb(data,success,failure){
+//     let internetSpeed = Math.floor(Math.random()*10)+1;
+//     if(internetSpeed > 4){
+//         success();
+//     }
+//     else{
+//         failure();
+//     }
+// }
+
+// savetoDb("my data",
+//     ()=>{
+//     console.log("Success: Data saved successfully");
+//     savetoDb(
+//         "Hello World",
+//         ()=>{
+//         console.log("Success:2 data2 saved successfully");
+//         savetoDb(
+//             "Shalaka",()=>{
+//             console.log("Success:3 data3 saved successfully");
+//         },
+//         ()=>{
+//             console.log("data not saved");
+//         });
+//     },
+//     ()=>{
+//         console.log("data not saved");
+//     });
+// },
+//     ()=>{
+//     console.log("Data not saved");
+// });
+
+// promise: an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It allows you to write asynchronous code in a more synchronous fashion, avoiding callback hell. Promises have three states: pending, fulfilled, and rejected. You can use .then() for success and .catch() for failure handling.
+
+// function saveToDb(data){
+//     return new Promise((resolve,reject)=>{
+//         let internetSpeed = Math.floor(Math.random()*10)+1;
+//         if(internetSpeed > 4){
+//             resolve("data saved successfully");
+//         }else{
+//             reject("failure: data not saved");
+//         }
+//     });
+// }
+
+// let request = saveToDb("my data");
+// request
+//    .then(()=>{
+//     console.log("Promise was resolved");
+//     console.log(request);
+//    })
+//    .catch(()=>{
+//     console.log("Promise was rejected");
+//     console.log(request);
+//    })
+
+// saveToDb("my data")
+//     .then(()=>{
+//         console.log("Data1 saved.");
+//         saveToDb("Hello World")
+//             .then(()=>{
+//                 console.log("Data2 saved");
+//             });
+//     })
+//     .catch(()=>{
+//         console.log("Promise was rejected");
+//     });
+
+// saveToDb("my data")
+//     .then((result)=>{
+//         console.log("Data1 saved.");
+//         console.log("result of promise:",result);
+//         return saveToDb("Hello World")
+//     })
+//     .then((result)=>{
+//         console.log("Data2 saved");
+//         console.log("result of promise:",result);
+//         return saveToDb("Shalaka");
+//     })
+//     .then((result)=>{
+//         console.log("Data3 saved");
+//         console.log("result of promise:",result);
+//     })
+//     .catch((error)=>{
+//         console.log("Promise was rejected");
+//         console.log("error:",error);
+//     });
 
 
 
