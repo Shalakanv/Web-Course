@@ -565,10 +565,32 @@ h1 = document.querySelector("h1");
 function changeColor(color,delay){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
+            let num = Math.floor(Math.random()*5)+1;
+            if(num > 3)
+            {
+                reject("Promise rejected");
+            }
             h1.style.color = color;
+            console.log(`Color changed to ${color}`);
             resolve("Color changes!");
         },delay);
     });
+}
+
+async function demo()
+{
+    try {
+        await changeColor("red",1000);
+        await changeColor("orange",1000);
+        await changeColor("green",1000);
+        await changeColor("blue",1000);
+        await changeColor("pink",1000);
+    } catch (error) {
+        console.error(error);
+    }
+
+    let a = 5;
+    console.log("new number is:",a+3);
 }
 
 // callback hell: when multiple nested callbacks are used, making the code hard to read and maintain. It can be avoided by using promises or async/await syntax.
@@ -584,22 +606,22 @@ function changeColor(color,delay){
 //     });
 // });
 
-changeColor("red",1000)
-.then(()=>{
-    console.log("Color changed to red");
-    return changeColor("orange",1000);
-})
-.then(()=>{
-    console.log("Color changed to orange");
-    return changeColor("green",1000);
-})
-.then(()=>{
-    console.log("Color changed to green");
-    return changeColor("blue",1000);
-})
-.then(()=>{
-    console.log("Color changed to blue");
-})
+// changeColor("red",1000)
+// .then(()=>{
+//     console.log("Color changed to red");
+//     return changeColor("orange",1000);
+// })
+// .then(()=>{
+//     console.log("Color changed to orange");
+//     return changeColor("green",1000);
+// })
+// .then(()=>{
+//     console.log("Color changed to green");
+//     return changeColor("blue",1000);
+// })
+// .then(()=>{
+//     console.log("Color changed to blue");
+// })
 
 // setTimeout"=>
 //     h1.style.color = "red";
@@ -705,6 +727,38 @@ changeColor("red",1000)
 //     });
 
 
+// async function greet(){
+//     throw "404 page not found";
+//     return "Hello";
+// }
 
+// greet()
+//     .then((result)=>{
+//         console.log("result:",result);
+//     })
+//     .catch((error)=>{
+//         console.log("error:",error);
+//     });
 
+// let demo = async()=>{
+//     return 5;
+// }
 
+// function getNum(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             let num = Math.floor(Math.random()*10)+1;
+//             console.log("Random number is:",num);
+//             resolve();
+//         },1000);
+// });
+// }
+
+// async function demo()
+// {
+//     await getNum();
+//     await getNum();
+//     await getNum();
+//     await getNum();
+//     getNum();
+// }
