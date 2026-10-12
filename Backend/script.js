@@ -13,5 +13,8 @@
 // console.log(math);
 // console.log(math.sum(2,3));
 
-const info = require("./Fruits");
-console.log(info);
+// const info = require("./fruits");
+// console.log(info);
+
+import {sum,PI} from "./math.js";
+console.log(sum(2,3));
